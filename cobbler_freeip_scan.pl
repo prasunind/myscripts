@@ -1,14 +1,11 @@
 #!/usr/bin/perl
-$mesg="\n\t -h --help \n\t -n --Network fe, data or mgmt\n\t -C --If it's a controller \n\t -c --Number or free ip you need,upto 508 \n \n Usage : ./freeip.pl -n <network subnet name> -C <if it's a controller> -c <No of free ip's you need,upto 508 > \n";
+$mesg="\n\t -h --help \n\t -n --Network fe, data or mgmt\n\t -a --If it's a controller \n\t -c --Number or free ip you need,upto 508 \n \n Usage : ./freeip.pl -n <network subnet name> -C <if it's a controller> -c <No of free ip's you need,upto 508 > \n";
 
 use Getopt::Std;
 use Array::Utils qw(:all);
 
-
-
-
 $NETWORK="10.129.";
-@FE=(0);
+@FE=(4);
 @FECNT=(1..15);
 @DATA=(16);
 @DATACNT=(17..31);
@@ -18,7 +15,7 @@ $NETWORK="10.129.";
 undef $COUNT;
 
 %options=();
-getopts("hn:Cc:", \%options);
+getopts("hn:ac:", \%options);
 
 
 $OPT="$options{n}" if  defined $options{n};
@@ -26,16 +23,16 @@ $COUNT="$options{c}" if  defined $options{c};
 print "$mesg" if defined $options{h};
 
 
-if (defined $options{C}){
-        if ( "$options{n}" eq "fe" )   { @NETPARAM=@FECNT}
-        if ( "$options{n}" eq "data" ) { @NETPARAM=@DATACNT }
-        if ( "$options{n}" eq "mgmt" ) { @NETPARAM=@MGMTCNT }
-        }
-
-if (!defined $options{C}){
+if (defined $options{a}){
         if ( "$options{n}" eq "fe" )   { @NETPARAM=@FE}
         if ( "$options{n}" eq "data" ) { @NETPARAM=@DATA }
         if ( "$options{n}" eq "mgmt" ) { @NETPARAM=@MGMT }
+        }
+
+if (!defined $options{a}){
+        if ( "$options{n}" eq "fe" )   { @NETPARAM=@FECNT}
+        if ( "$options{n}" eq "data" ) { @NETPARAM=@DATACNT }
+        if ( "$options{n}" eq "mgmt" ) { @NETPARAM=@MGMTCNT }
         }
 
 
