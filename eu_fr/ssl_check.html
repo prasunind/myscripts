@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!--  Created with the CoffeeCup HTML Editor 2008  -->
+<!--           http://www.coffeecup.com/           -->
+<!--        Brewed on 9/19/2008 3:34:29 PM         -->
+<head>
+  <title>SSL Check</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+ </head>
+<body>
+<form action="http://host.com:5900/france/scripts/check_cert.pl" method="post">
+<td>
+Service Name:<select name="first" size="1">
+<option value="" selected="">Channel</option>
+
+ <option value="divertissement.fr">divertissement.fr</option>
+ 
+</select>
+</td>
+<br> <br> 
+<input type="submit" value="Submit Query">
+</form><br><br><br>
+</body>
+<br> 
+Here you can check SSL validty preriod for all FR channels.
+
+<br> <br> Select the channel from the drop down menu and submit.
+
+The output will contain the hostnames of servers where isntance of 
+the channel is running.
+<br>
+Date till the CERT file of the channel is valid.
+<br>
+Date till the CA file is valid.
+</br>
+<form action="http://host.com:5900/fr3/scripts/ttest/create-ssl.pl" method="get">
+<font size="1"><h4>For Genrating New SSL enter the FQDN of the site</h4></font>
+<input type="text" name="sitename" value="FQDN">
+<input type="submit" value="Generate SSL">
+</form>
+</html>
+

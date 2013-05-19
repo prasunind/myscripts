@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!--  Created with the CoffeeCup HTML Editor 2008  -->
+<!--           http://www.coffeecup.com/           -->
+<!--        Brewed on 9/22/2008 3:07:46 PM         -->
+<head>
+  <title>Nagios Editor</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<!-- Start of FORM -->
+<form method="POST" action="http://10.2.0.10/cgi-bin/nagioseditor.pl">
+<!-- End of FORM -->
+<font size="2" color="#000000" face="Arial">
+<div><table width="90%" border="1" cellpadding="1" cellspacing="1" bgcolor="#ffffff">
+<tr valign="top" align="center"  bordercolordark="navy" bordercolor="blue"  >
+<br> <h4> Yosemite Nagios host editor </h4></br>
+<td>
+Hostname<input type="text" name="hst1" > </input>
+</td>
+<td>
+Alias <input type="text" name="alias1"> </input>
+</td>
+<td>
+  Host Template:<select name="template1" size="1" >
+  <option  value="monkey_unix_template">Monkey Unix</option>
+  <option  value="monkey_unix_template_virt">Money Unix Virtual</option>
+  <option  value="monkey_windows_template">Monkey Win</option>
+  <option  value="internal_corp_template">Corp Internal</option>
+  <option  value="external_corp_template">Corp External</option>
+  <option  value="firewall_template">Firewall</option>
+  <option  value="switch_template">Switch</option>
+  <option  value="vpn_template">Vpn</option>
+   </select>
+</td>
+</tr>
+</table>
+
+<h5> Services need to be monitored </h5>
+<div><table width="40%" border="1" cellpadding="3" cellspacing="2"  bgcolor="#ffffff">
+<tr>
+  service name1:<select name="ser1"  >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>s
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+    <option selected value="na"> </option>
+  </select>
+</tr>
+<tr>
+service name2:<select name="ser2" size="1" >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+  <option selected value="na"> </option>
+  </select>
+</tr>
+<tr>
+service name3:<select name="ser3" size="1" >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+  <option selected value="na"> </option>
+  </select>
+</tr>
+<tr>
+service name3:<select name="ser4" size="1" >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+  <option selected value="na"> </option>
+  </select>
+</tr>
+<tr>
+service name5:<select name="ser5" size="1" >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+  <option selected value="na"> </option>
+  </select>
+</tr>
+<tr>
+service name6:<select name="ser6" size="1" >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+  <option selected value="na"> </option>
+  </select>
+</tr>
+<tr>
+service name7:<select name="ser7" size="1" >
+  <option selected value="automount_proc_template">autofs</option>
+  <option selected value="automount_proc_monkey_template">autofs monkey</option>
+  <option selected value="cpu_load_template"> cpu </option>
+  <option selected value="cpu_load_critical"> cpu critical </option>
+  <option selected value="disk_root_template">disk root  </option>
+  <option selected value="disk_root_critical_template">disk root critical  </option>
+  <option selected value="disk_export1_template ">disk export1 </option>
+  <option selected value="disk_export1_critical_template">disk export critical  </option>
+  <option selected value="disk_export2_template"> disk export2  </option>
+  <option selected value="disk_export2_critical_template"> disk export2 critical </option>
+  <option selected value="http_template"> http </option>
+  <option selected value="http_template_critical "> http critical  </option>
+  <option selected value="memory_template">memory </option>
+  <option selected value="ntpd_proc_template">ntpd </option>
+  <option selected value="nscd_proc_template">nscd </option>
+  <option selected value="postfix_proc_template">postfix </option>
+  <option selected value="puppet_proc_template">puppet </option>
+  <option selected value="smtp_template">smtp </option>
+  <option selected value="ssh_template"> ssh </option>
+  <option selected value="ssh_template_critical ">ssh critical </option>
+  <option selected value="monk_win_memory_templatel">Win Mem </option>
+  <option selected value="monk_win_cpu_load_template">Win Cpu </option>
+  <option selected value="na"> </option>
+  </select>
+</tr>
+</table>
+</div>
+</font>
+<br><input type="submit" value="Ok">
+
+</form>
+</body>
+</html>
+
